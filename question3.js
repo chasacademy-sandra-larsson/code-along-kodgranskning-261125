@@ -14,9 +14,10 @@ const movies = [
 
 
 function renderList(movies) {
-// Din kod här:
+  // ✅ Kort och modern lösning med map och template literals
+  const list = document.getElementById("movieList");
+  list.innerHTML = movies.map((movie) => `<li>${movie.title} (${movie.year})</li>`);
 
- 
 }
 
 renderList(movies);

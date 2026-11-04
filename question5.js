@@ -5,7 +5,9 @@
 // Använd indexOf eller includes
 
 function filterWordsWithLetterA(words) {
-  //Din kod här
+  // ✅ Robust: hanterar både stora och små bokstäver
+  return words.filter((word) => word.toLowerCase().includes("a"));
+
 }
 
 

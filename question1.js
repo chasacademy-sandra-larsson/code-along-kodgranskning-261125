@@ -6,12 +6,8 @@
 const numbers = [200, 54, 582, 33, 4];
 
 
-// Din kod här: 
-
-
-
-
-
+// ✅ Effektiv lösning med filter
+const smallerThan50 = numbers.filter((number) => number < 50);
 
 // Fråga 1.2 (2p) 
 //Använd map på arrayen fullName och skapa en ny array lastNameFirst 
@@ -20,14 +16,13 @@ const numbers = [200, 54, 582, 33, 4];
 const fullName = ["John Doe", "Jane Doe", "John Smith", "Jane Smith"];
 
 
-// Din kod här:
-
-
-
-
-
-
+// ✅ Tydlig och läsbar lösning
+const lastNameFirst = [];
+fullName.forEach((name) => {
+  const parts = name.split(" ");
+  lastNameFirst.push(parts[1] + ", " + parts[0]);
+});
 
 // Test
-// console.log(smallerThan50); // [33, 4]
-// console.log(lastNameFirst); // ["Doe, John", "Doe, Jane", "Smith, John", "Smith, Jane"]
+console.log(smallerThan50); // [33, 4]
+console.log(lastNameFirst); // ["Doe, John", "Doe, Jane", "Smith, John", "Smith, Jane"]

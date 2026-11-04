@@ -7,18 +7,16 @@ const car = {
     speed: 100,
   };
 
-// Din kod här:
-
-
+// ✅ Skapar car2 och uppdaterar speed
+const car2 = car;
+car2.speed = 200;
 
 // Fråga 2.2 (1p) 
 // Skapa två variabler name och speed genom
 // destructuring av objektet car.
 
-// Din kod här:
-
-
+const { name, speed } = car;
 
 // Test
-//console.log(car2); // Ska logga { name: 'Volvo', speed: 200 }
-//console.log(`Name: ${name}, Speed: ${speed}`); // Name Volvo, Speed: 100
+console.log(car2); // Ska logga { name: 'Volvo', speed: 200 }
+console.log(`Name: ${name}, Speed: ${speed}`); // Name Volvo, Speed: 100
