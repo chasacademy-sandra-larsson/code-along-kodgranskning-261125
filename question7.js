@@ -14,9 +14,11 @@ const people = [
 ];
 
 function updatePeople(people) {
-  // Din kod här:
-
-
+  // ✅ Använder map för att skapa den nya arrayen
+  return people.map((person) => {
+    person.adult = person.age >= 18;
+    return person;
+  });
 
 }
 
@@ -26,7 +28,8 @@ function updatePeople(people) {
 // Använd filter.
 
 function getAdults(adult) {
-  // Din kod här:
+  // ✅ Filtrerar fram de vuxna
+  return adult.filter((p) => p.adult == true);
 
 }
 

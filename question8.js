@@ -6,14 +6,26 @@
 // Rendera ut vardera objekts 'title' i ul-elementet med id="todoList"
 
 
-// Din kod här:
+// ✅ Modern async/await med fullständig felhantering
+async function getTodos() {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/");
+    const todos = await response.json();
 
+    const completed = todos.filter((todo) => todo.completed).slice(0, 20);
 
+    const list = document.getElementById("todoList");
+    completed.forEach((todo) => {
+      const li = document.createElement("li");
+      li.textContent = todo.title;
+      list.appendChild(li);
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
 
-
-
-
-
+getTodos();
 
 // Test
 // En renderad ul-lista ska visas i index.html enligt följande:

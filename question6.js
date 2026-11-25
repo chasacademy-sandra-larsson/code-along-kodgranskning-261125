@@ -15,8 +15,9 @@ const products2 = [
 
 
 function calculateTotalPrice(shoppingCart) {
-  // Din kod här:
- 
+  // ✅ reduce med startvärde 0
+  return shoppingCart.reduce((total, product) => total + product.price, 0);
+
 }
 
 console.log(calculateTotalPrice(products1)); // Ska logga 140
